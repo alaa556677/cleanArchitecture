@@ -10,3 +10,4 @@ class PostEntity extends Equatable{
   List<Object?> get props => [id, title, body];
 
 }
+

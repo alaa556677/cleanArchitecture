@@ -2,22 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:posts_app/core/theme/theme.dart';
 
 void main(){
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget{
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Posts App',
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: const HomePage(),
       theme: appTheme,
     );
   }
 }
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
