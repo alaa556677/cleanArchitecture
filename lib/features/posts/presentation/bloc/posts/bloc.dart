@@ -13,6 +13,7 @@ class PostsBloc extends Bloc<PostsEvent, PostsState> {
       if (event is GetAllPostEvent){
         emit(LoadingPostsState());
         final failureOrPosts = await getAllPostsUseCases();
+        
         emit(postState(failureOrPosts));
       }else if (event is RefreshPostEvent){
         emit(LoadingPostsState());
